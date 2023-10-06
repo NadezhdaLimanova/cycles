@@ -15,7 +15,7 @@ def process_input(request):
 
             for i in range(months):
                 day_format = datetime.strptime(day, '%d.%m.%Y')
-                first_month_result = day_format + timedelta(days=(longing-1) * i)
+                first_month_result = day_format + timedelta(days=longing * i)
                 first_month = datetime.strftime(first_month_result, '%d.%m.%Y')
                 cycles_dict[i] = first_month
 
