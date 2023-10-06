@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Для Германа</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 24pt;
+            font-family: Calibri;
+        }
+
+        p {
+            text-indent: 20px;
+            font-size: 18pt;
+            font-family: Calibri;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать на сайт для расчета первых дней менструации!</h1>
+
+    <p>Введите первый день последней менструации в формате dd.mm.yy: </p>
+    <form action="{% url 'process_input' %}" method="POST">
+      {% csrf_token %}
+      <input type="text" name="day" placeholder="dd.mm.yy">
+    <p>Введите среднее количество дней между менструациями:</p>
+                <form action="{% url 'process_input' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="longing" placeholder="числовое значение">
+    <p>Введите количество необходимых вам месяцев:</p>
+                <form action="{% url 'process_input' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="months" placeholder="числовое значение">
+
+                  <p><button type="submit">Отправить</button></p>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Заголовок</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 24pt;
+            font-family: Calibri;
+        }
+
+        p {
+            text-indent: 20px;
+            font-size: 18pt;
+            font-family: Calibri;
+        }
+    </style>
+</head>
+<body>
+    <h1>Результаты расчета</h1>
+
+    {% if error_message %}
+    <p>{{ error_message }}</p>
+    {% else %}
+    <p>Даты начала менструации на выбранное число месяцев: </p>
+    {% for months in cycles_dict.values %}
+    <p>{{ months }}</p>
+    {% endfor %}
+    {% endif %}
+
+    <p><a href=" ">Посчитать еще раз</a></p>
+
+</body>
+</html>
