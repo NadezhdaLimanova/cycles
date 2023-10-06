@@ -1,6 +1,5 @@
 import datetime
 from datetime import timedelta, datetime
-
 from django.shortcuts import render
 
 
